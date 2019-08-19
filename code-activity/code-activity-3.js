@@ -1,13 +1,15 @@
 const rvColors = ["red", "black", "grey", "white"];
 
-let newColors = rvColors.map(color => {
-    let [first , ...rest] = color
-    first = first.toUpperCase()
-    return [first, ...rest].join("")
+let newColorsArray = rvColors.map(color => {
+    let [firstLetter , ...remainingLetters] = color;
+    console.log(firstLetter)
+    console.log(...remainingLetters);
+    firstLetter = firstLetter.toUpperCase();
+    return [firstLetter, ...remainingLetters].join("");
 })
 
-const newColor = newColors.join()
+const newColors = newColorsArray.toString()
 
-const colors = newColor.replace(/,/g, ' ');
+const colors = newColors.replace(/,/g, ' ');
 
 console.log(colors);
