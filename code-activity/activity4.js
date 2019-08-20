@@ -1,12 +1,23 @@
 console.log(`Question One -------------------------------`);
 const reversedNum = num => {
-    let newNum = (num.toString().split('').reverse(Math.sign(num)).join(''))
-    console.log(`original: ${num} reversed: ${newNum}`)
+    if (num > 0) {
+        let newNum = num.toString().split('').reverse(Math.sign(num)).join('')
+        console.log(`original: ${num} reversed: ${newNum}`)
+    } else {
+        let newNum = num.toString().split('').reverse(Math.sign(num)).join('')
+        let newArray = newNum.split('');
+        let negative =  newArray[newArray.length - 1];
+        newArray.pop(negative);
+        newArray.unshift(negative);
+        const newValue = newArray.join('')
+        console.log(`original: ${num} reversed: ${newValue}`)
+    }
 }
 
-reversedNum(8721)
+reversedNum(-8721)
 reversedNum(1278)
 
+console.log('');
 console.log(`Question Two ------------------------------`);
 
 const vowelCount = string => {
@@ -27,6 +38,7 @@ vowelCount('Emma');
 vowelCount('Thomas');
 vowelCount('Dinosaur');
 
+console.log('');
 console.log(`Question Three ----------------------------`);
 
 const isPalindrome = str => {
@@ -43,6 +55,7 @@ const isPalindrome = str => {
 isPalindrome('Madam');
 isPalindrome('Anna');
 isPalindrome('Thomas');
+isPalindrome('Emma');
 
 // Question 4 : "Outside"
 
