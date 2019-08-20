@@ -1,7 +1,7 @@
 console.log(`Question One -------------------------------`);
 const reversedNum = num => {
     if (num > 0) {
-        let newNum = num.toString().split('').reverse(Math.sign(num)).join('')
+        let newNum = num.toString().split('').reverse().join('')
         console.log(`original: ${num} reversed: ${newNum}`)
     } else {
         let newNum = num.toString().split('').reverse(Math.sign(num)).join('')
@@ -30,6 +30,7 @@ const vowelCount = string => {
           vowelCount++;
         }
     }
+
     console.log(`The string "${string}" has ${vowelCount} vowels`) 
     return vowelCount
 }
@@ -44,12 +45,7 @@ console.log(`Question Three ----------------------------`);
 const isPalindrome = str => {
     let string = str.toLowerCase()
     let reversed = string.split("").reverse().join("");
-    
-    if (reversed === string) {
-        console.log(`The string "${string}" is a Palidrome!`)
-    } else {
-        console.log(`The string "${string}" is not a palidrome!`)
-    }
+    return reversed === string ? console.log(`The string "${string}" is a Palidrome!`) : console.log(`The string "${string}" is not a palidrome!`);
 }
 
 isPalindrome('Madam');
