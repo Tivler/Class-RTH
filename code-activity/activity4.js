@@ -10,11 +10,12 @@ reversedNum(1278)
 console.log(`Question Two ------------------------------`);
 
 const vowelCount = string => {
-    const vowels = "aeiouAEIOU";
+    const vowels = "aeiou";
+    const newString = string.toLowerCase()
     let vowelCount = 0;
 
-    for(let i = 0; i < string.length; i++) {
-        if (vowels.indexOf(string[i]) !== -1) {
+    for(let i = 0; i < newString.length; i++) {
+        if (vowels.indexOf(newString[i]) !== -1) {
           vowelCount++;
         }
     }
@@ -28,11 +29,11 @@ vowelCount('Dinosaur');
 
 console.log(`Question Three ----------------------------`);
 
-const isPalindrome = string => {
-    let normal = string.toLowerCase().match(/[a-z]/gi).reverse();
-    let check = normal.join('') === normal.reverse().join('');
+const isPalindrome = str => {
+    let string = str.toLowerCase()
+    let reversed = string.split("").reverse().join("");
     
-    if (check) {
+    if (reversed === string) {
         console.log(`The string "${string}" is a Palidrome!`)
     } else {
         console.log(`The string "${string}" is not a palidrome!`)
