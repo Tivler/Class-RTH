@@ -6,3 +6,6 @@ Associative Arrayss are Objects like we define them in JavaScript for other lang
 
 ## What is a multidimensional array?
 A multiDimensional Array is an array containing multiple arrays.
+
+## When is a function considered to be a callback function?
+A callback function is a function that is passed as an argument to another function, to be “called back” at a later time.
